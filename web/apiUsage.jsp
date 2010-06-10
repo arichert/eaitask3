@@ -33,8 +33,10 @@
 
         <h2>Attributes</h2>
         <ul>
-           <li><a href="<%=apiBase%>listDomainAttributes&domainName=cars">listDomainAttributes&domainName=cars</a></li>
-           <li><a href="<%=apiBase%>createAttribute&attributeName=horsepower&domainName=cars">createAttribute&attributeName=horsepower&domainName=cars</a></li>
+            <li><a href="<%=apiBase%>createAttribute&attributeName=horsepower&domainName=cars">createAttribute&attributeName=horsepower&domainName=cars</a></li>
+            <li><a href="<%=apiBase%>deleteAttribute&attributeName=horsepower&domainName=cars">deleteAttribute&attributeName=horsepower&domainName=cars</a></li>
+            <li><a href="<%=apiBase%>listDomainAttributes&domainName=cars">listDomainAttributes&domainName=cars</a></li>
+           
         </ul>
 
         <h2>Items</h2>

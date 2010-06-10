@@ -36,7 +36,7 @@ public class AttributeAPI {
         }
 
         MessageDAO msg;
-        //Fetch the domain data (if there is any)
+        //Fetch the attribute data (if there is any)
         if (Attribute2Database.createAttribute(attribute_name, domain_name)) {
             msg = new MessageDAO("success", "Attribute " + attribute_name + " was created in Domain " + domain_name + ".");
         } else {
@@ -47,6 +47,35 @@ public class AttributeAPI {
         //Serialize the Java objects and exclude the java class name
         out.print(serializer.exclude("class").serialize(msg));
     }
+
+
+    public static void deleteAttribute(HttpServletRequest request, HttpServletResponse response, PrintWriter out){
+        String attribute_name = request.getParameter("attributeName");
+        String domain_name = request.getParameter("domainName");
+
+        //Name not set
+        if (attribute_name == null || domain_name == null) {
+            //Forward to the example and usage page of the Web api
+            RequestDispatcher dispatcher = request.getRequestDispatcher("apiUsage.jsp");
+            try {
+                dispatcher.forward(request, response);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+        MessageDAO msg;
+        //Fetch the attribute data (if there is any)
+        if (Attribute2Database.deleteAttribute(attribute_name, domain_name)) {
+            msg = new MessageDAO("success", "Attribute " + attribute_name + " was deleted in Domain " + domain_name + ".");
+        } else {
+            msg = new MessageDAO("error", "Attribute " + attribute_name + " could not be deleted in Domain " + domain_name + "!");
+        }
+        //Initialize a JSON serializer
+        JSONSerializer serializer = new JSONSerializer();
+        //Serialize the Java objects and exclude the java class name
+        out.print(serializer.exclude("class").serialize(msg));
+    }
+
 
     public static void listDomainAttributes(HttpServletRequest request, HttpServletResponse response, PrintWriter out){
         //get the domain name parameter

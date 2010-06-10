@@ -68,6 +68,9 @@ public class Dispatcher extends HttpServlet {
             AttributeAPI.createAttribute(request, response, out);
         }
 
+        else if (action.equals("deleteAttribute")) {
+            AttributeAPI.deleteAttribute(request, response, out);
+        }
 
         /******HANDLING OF ITEMS********/
         /**TODO**/
