@@ -56,9 +56,6 @@ public class Dispatcher extends HttpServlet {
         } //Get a domain by name
         else if (action.equals("createDomain")) {
             DomainAPI.createDomain(request, response, out);
-        } //Delete domain
-        else if (action.equals("deleteDomain")) {
-            DomainAPI.deleteDomain(request, response, out);
         }
 
         /******HANDLING OF ATTRIBUTES********/

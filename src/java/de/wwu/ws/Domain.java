@@ -16,7 +16,7 @@ import javax.jws.soap.SOAPBinding.Style;
 @SOAPBinding(style = Style.DOCUMENT, use = SOAPBinding.Use.LITERAL)
 public class Domain {
 
-    //SOAP response contains the resulting xml nodes in <listDomainsResponse>
+    //SOAP response contains the resulting xml nodes in <listDomainsResponse> ??????
     @WebMethod(operationName = "createDomain")
     //Results of a list are wrapped in xml called <domain>
     @WebResult(name = "message")
@@ -28,6 +28,19 @@ public class Domain {
             return new MessageDAO("success","Domain " + domainname + " was created.");
             //... or an error message
         else return new MessageDAO("error","Domain " + domainname + " was not created (it is already existing).");
+
+    }
+
+    @WebMethod(operationName = "deleteDomain")
+    @WebResult(name = "message")
+    public MessageDAO deleteDomain(@WebParam(name="domainname")String domainname) {
+
+        //Try to create new Domain
+        if(Domain2Database.deleteDomain(domainname))
+            //Return success message...
+            return new MessageDAO("success", "Domain " + domainname + " was deleted.");
+            //... or an error message
+        else return new MessageDAO("error", "Domain " + domainname + " was not deleted(doesn't exist).");
 
     }
 

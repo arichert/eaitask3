@@ -7,6 +7,9 @@ import java.util.List;
 
 /**
  * Object is used to get and store data of "domains" in the database
+ *  
+ *
+ * @author guth
  */
 public class Domain2Database {
 
@@ -66,60 +69,6 @@ public class Domain2Database {
 
         return false;
     }
-
-    /**
-     * Search the database for the domain with name
-     *
-     * @param domainName
-     * @return DomainDAO
-     */
-    public static Boolean deleteDomain(String domainname) {
-
-        try {
-
-            //Connect to SQLite database
-            db = new SQLite().connect();
-
-            //Create prepared statement
-            PreparedStatement prep = db.conn.prepareStatement("select * from domain where name = ?;");
-            prep.setString(1, domainname);
-            ResultSet rs = prep.executeQuery();
-
-            //if ResultSet is not empty, the domain can be deleted
-            if (rs.next()) {
-
-                //Close the ResultSet!!!!
-                //very important --> ...
-                rs.close();
-
-                //Create a new domain:
-                //Create prepared statement
-                prep = db.conn.prepareStatement("remove from domain where name = ?;");
-                //Set the domain name
-                prep.setString(1, domainname);
-                //Execute the sql statement
-                prep.execute();
-
-                return true;
-            }else
-            {
-               //Close the ResultSet!!!!
-               //very important --> ...
-                rs.close();
-                //Domain doesn't exist, cannot be deleted.
-                return false;
-            }
-
-
-
-        } catch (Exception e) {
-
-            System.out.println(e);
-        }
-
-        return false;
-    }
-
 
     /**
      * List all domains

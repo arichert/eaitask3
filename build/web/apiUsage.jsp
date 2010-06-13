@@ -18,6 +18,7 @@
 
         <strong><%=apiBase%></strong>
         <h1>Actions:</h1>
+         <%= System.getProperty("user.dir") + "/test.db" %>
          <h2>Maintenance</h2>
         <ul>
             <li><a href="<%=apiBase%>setUpDB">setUpDB</a></li>

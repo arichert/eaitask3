@@ -55,17 +55,12 @@ public class SQLite {
      */
     public void initialSetup() {
         try {
-            Statement stat = this.conn.createStatement();
-
-            //enable foreign key restraints (works if compiled that way, precompiled binaries should be allright)
-            stat.executeUpdate("PRAGMA foreign_keys = ON;");
 
             //If the table "domain" exists, then it gets deleted first!
+            Statement stat = this.conn.createStatement();
             stat.executeUpdate("drop table if exists domain;");
             //Create the table for "domain"
-            stat.executeUpdate(
-                    "CREATE TABLE domain (" +
-                    "name VARCHAR(200) PRIMARY KEY NOT NULL);");
+            stat.executeUpdate("create table domain (name);");
 
             PreparedStatement prep = this.conn.prepareStatement(
                     "insert into domain values (?);");
@@ -86,10 +81,7 @@ public class SQLite {
             stat = this.conn.createStatement();
             stat.executeUpdate("drop table if exists attribute;");
             //Create the table for "attribute"
-            stat.executeUpdate("CREATE TABLE attribute (attribute_name VARCHAR(200),"+
-                               "domain_name VARCHAR(200)," +
-                               "FOREIGN KEY (domain_name)   REFERENCES domain (name)," +
-                               "PRIMARY KEY (attribute_name, domain_name) );");
+            stat.executeUpdate("create table attribute (attribute_name, domain_name);");
 
             prep = this.conn.prepareStatement("insert into attribute (attribute_name, domain_name) values (?, ?);");
 
@@ -108,28 +100,8 @@ public class SQLite {
             //Create the table for "item"
             stat.executeUpdate(
                     "CREATE TABLE item (" +
-                    "item_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
-                    "domain_name VARCHAR(200) NOT NULL," +
-                    "FOREIGN KEY (domain_name)   REFERENCES domain (name) );");
-
-
-            conn.setAutoCommit(false);
-            prep.executeBatch();
-            conn.setAutoCommit(true);
-
-            //Value
-            stat = this.conn.createStatement();
-            stat.executeUpdate("DROP TABLE if exists value;");
-            //Create the table for "value"
-            stat.executeUpdate(
-                    "CREATE TABLE value (" +
-                    "item_id INTEGER, " +
-                    "domain_name VARCHAR(200)," +
-                    "attribute_name VARCHAR(200)," +
-                    "FOREIGN KEY (domain_name)   REFERENCES domain (name),"+
-                    "FOREIGN KEY (attribute_name)   REFERENCES attribute(attribute_name)," +
-                    "FOREIGN KEY (item_id)   REFERENCES item(item_id)," +
-                    "PRIMARY KEY (item_id, domain_name, attribute_name));");
+                    "item_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "domain_name VARCHAR(200));");
 
 
             conn.setAutoCommit(false);
