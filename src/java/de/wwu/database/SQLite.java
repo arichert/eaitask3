@@ -80,7 +80,7 @@ public class SQLite {
            //Attribute
             stat = this.conn.createStatement();
             stat.executeUpdate("drop table if exists attribute;");
-            //Create the table for "domain"
+            //Create the table for "attribute"
             stat.executeUpdate("create table attribute (attribute_name, domain_name);");
 
             prep = this.conn.prepareStatement("insert into attribute (attribute_name, domain_name) values (?, ?);");
@@ -88,6 +88,20 @@ public class SQLite {
             prep.setString(1, "brand");
             prep.setString(2, "cars");
             prep.addBatch();
+
+
+            conn.setAutoCommit(false);
+            prep.executeBatch();
+            conn.setAutoCommit(true);
+
+            //Item
+            stat = this.conn.createStatement();
+            stat.executeUpdate("DROP TABLE if exists item;");
+            //Create the table for "item"
+            stat.executeUpdate(
+                    "CREATE TABLE item (" +
+                    "item_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "domain_name VARCHAR(200));");
 
 
             conn.setAutoCommit(false);

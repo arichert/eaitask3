@@ -4,6 +4,9 @@
     <service name="Domain">
       <implementation-class>de.wwu.ws.Domain</implementation-class>
     </service>
+    <service name="Attribute">
+      <implementation-class>de.wwu.ws.Attribute</implementation-class>
+    </service>
     <service name="Maintenance">
       <implementation-class>de.wwu.ws.Maintenance</implementation-class>
     </service>
