@@ -123,7 +123,7 @@ public class SQLite {
             stat.executeUpdate(
                     "CREATE TABLE item (" +
                     "item_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
-                    "domain_name VARCHAR(200) NOT NULL," +
+                    "domain_name VARCHAR(200)," +
                     "FOREIGN KEY (domain_name)   REFERENCES domain (name) );");
 
             //Value
