@@ -69,7 +69,7 @@ public class Attribute2Database {
             db = new SQLite().connect();
             
             //First check if the attribute and the corresponding domain exist
-            PreparedStatement prep = db.conn.prepareStatement("select * from attribute where attribute_name = ? AND domain_name = ?;");
+            PreparedStatement prep = db.conn.prepareStatement("SELECT * from attribute where attribute_name = ? AND domain_name = ?;");
             prep.setString(1, attribute_name);
             prep.setString(2, domain_name);
             ResultSet rs = prep.executeQuery();
@@ -88,11 +88,11 @@ public class Attribute2Database {
                 //Execute the sql statement
                 prep.executeUpdate();
                 
-                /*
-                 * @TO-Do:
-                 * Delete all occurances in table "value"
-                 */
-                //
+                //Delete all occurances in table "value"
+                prep = db.conn.prepareStatement("DELETE FROM value WHERE attribute_name = ? AND domain_name = ?;");
+                prep.setString(1, attribute_name);
+                prep.setString(2, domain_name);
+                prep.executeUpdate();
 
                 return true;
             } else

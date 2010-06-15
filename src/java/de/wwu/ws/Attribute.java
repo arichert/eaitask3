@@ -31,7 +31,7 @@ public class Attribute {
     public MessageDAO createAttribute(@WebParam(name="attributeName")String attributeName,
             @WebParam(name="domainName")String domainName) {
 
-        //Try to create new Domain
+        //Try to create new Attribute
         if(Attribute2Database.createAttribute(attributeName, domainName))
             //Return success message...
             return new MessageDAO("success", "Attribute " + attributeName + " was created in Domain " + domainName + ".");
@@ -40,5 +40,24 @@ public class Attribute {
 
     }
 
+    @WebMethod(operationName = "deleteAttribute")
+    @WebResult(name = "message")
+    public MessageDAO deleteAttribute(@WebParam(name="attributeName")String attributeName,
+            @WebParam(name="domainName")String domainName) {
+
+        //Try to delete Attribute
+        if(Attribute2Database.deleteAttribute(attributeName, domainName))
+            //Return success message...
+            return new MessageDAO("success", "Attribute " + attributeName + " was deleted in Domain " + domainName + ".");
+            //... or an error message
+        else return new MessageDAO("error", "Attribute " + attributeName + " could not be deleted in Domain " + domainName + "!");
+    }
+
+
+    @WebMethod(operationName = "listDomainAttributes")
+    @WebResult(name = "attribute")
+    public List<AttributeDAO> listDomainAttributes(@WebParam(name="domainName")String domainName) {
+        return Attribute2Database.listDomainAttributes(domainName);
+    }
 
 }
