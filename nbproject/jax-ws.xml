@@ -10,6 +10,9 @@
     <service name="Maintenance">
       <implementation-class>de.wwu.ws.Maintenance</implementation-class>
     </service>
+    <service name="Item">
+      <implementation-class>de.wwu.ws.Item</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

@@ -38,23 +38,13 @@ public class ItemAPI
                 System.out.println(e);
             }
         }
-
-        MessageDAO msg;
         //Fetch the item data (if there is any)
         int newItemId = Item2Database.createItem(domain_name);
-        if (newItemId != 0)
-        {
-            msg = new MessageDAO("success", "Item " + newItemId +
-                    " was created in Domain " + domain_name + ".");
-        } else
-        {
-            msg = new MessageDAO("error", "Item could not be created in Domain "
-                    + domain_name + "!");
-        }
+        
         //Initialize a JSON serializer
         JSONSerializer serializer = new JSONSerializer();
         //Serialize the Java objects and exclude the java class name
-        out.print(serializer.exclude("class").serialize(msg));
+        out.print(serializer.exclude("class").serialize(newItemId));
     }
 
     public static void deleteItem(HttpServletRequest request,
