@@ -145,8 +145,8 @@ public class Item2Database
 
             if (rs.next())
             {
-                requestedItem.setItem_id(rs.getInt("item_id"));
-                requestedItem.setDomain_name(rs.getString("domain_name"));
+                requestedItem.item_id = rs.getInt("item_id");
+                requestedItem.domain_name = rs.getString("domain_name");
                 String attributeName = rs.getString("attribute_name");
                 String value = rs.getString("value");
                 requestedItem.addAttribute(attributeName, value);

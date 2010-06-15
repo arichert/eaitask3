@@ -125,6 +125,7 @@ public class SQLite {
                     "item_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
                     "domain_name VARCHAR(200)," +
                     "FOREIGN KEY (domain_name)   REFERENCES domain (name) );");
+            System.out.println("Hier wurde Item erstellt!!!!!!!!!!!!!!!");
 
             //Value
             stat = this.conn.createStatement();

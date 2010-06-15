@@ -36,28 +36,4 @@ public class ItemDAO implements Serializable
     {
         attributes.put(attribute, value);
     }
-
-    public HashMap<String, String> getAttributes() {
-        return attributes;
-    }
-
-    public String getDomain_name() {
-        return domain_name;
-    }
-
-    public int getItem_id() {
-        return item_id;
-    }
-
-    public void setAttributes(HashMap<String, String> attributes) {
-        this.attributes = attributes;
-    }
-
-    public void setDomain_name(String domain_name) {
-        this.domain_name = domain_name;
-    }
-
-    public void setItem_id(int item_id) {
-        this.item_id = item_id;
-    }
 }

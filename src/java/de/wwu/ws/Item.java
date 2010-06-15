@@ -47,7 +47,7 @@ public class Item
     }
     @WebMethod(operationName = "listDomainItems")
     //Results of a list are wrapped in xml called <item>
-    @WebResult(name = "list")
+    @WebResult(name = "item")
     public List<ItemDAO> listDomainItems(
             @WebParam(name="domainName")String domainName)
     {

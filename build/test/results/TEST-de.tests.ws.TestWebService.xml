@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="florian-mullers-macbook.local" name="de.tests.ws.TestWebService" tests="2" time="0.639" timestamp="2010-06-15T14:33:08">
+  <properties>
+    <property name="netbeans.autoupdate.country" value="DE" />
+    <property name="javac.test.classpath" value="libs\sqlitejdbc-v056.jar:libs\flexjson.jar:libs\jettison-1.2.jar:build/web/WEB-INF/classes:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/modules/ext/junit-4.5.jar" />
+    <property name="libs.jsf20.maven-pom" value="" />
+    <property name="source.root" value="src" />
+    <property name="do.display.browser" value="true" />
+    <property name="org.openide.TopManager.GUI" value="true" />
+    <property name="libs.junit.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/docs/junit-3.8.2-api.zip" />
+    <property name="javac.includes" value="de/tests/ws/TestWebService.java" />
+    <property name="ant.core.lib" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/ant/lib/ant.jar" />
+    <property name="libs.swing-app-framework.src" value="" />
+    <property name="javadoc.windowtitle" value="" />
+    <property name="libs.toplink.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/toplink/toplink-essentials.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/toplink/toplink-essentials-agent.jar" />
+    <property name="user.dir" value="/Users/florian/Documents/Uni/Sommersemester 10/Enterprise Application Integration/eaitask3" />
+    <property name="com.apple.mrj.application.apple.menu.about.name" value="NetBeans" />
+    <property name="libs.hibernate-persistence.javadoc" value="" />
+    <property name="java.vm.version" value="16.3-b01-279" />
+    <property name="libs.jstl11.maven-pom" value="" />
+    <property name="libs.Java-EE-GlassFish-v3.wsimport" value="" />
+    <property name="libs.MySQLDriver.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/mysql-connector-java-5.1.6-bin.jar" />
+    <property name="libs.jstl11.src" value="" />
+    <property name="javadoc.notree" value="false" />
+    <property name="lib.dir" value="web/WEB-INF/lib" />
+    <property name="netbeans.autoupdate.version" value="1.23" />
+    <property name="libs.EclipseLink-GlassFish-v3.classpath" value="/Applications/NetBeans/sges-v3/glassfish/modules/org.eclipse.persistence.antlr.jar:/Applications/NetBeans/sges-v3/glassfish/modules/org.eclipse.persistence.asm.jar:/Applications/NetBeans/sges-v3/glassfish/modules/org.eclipse.persistence.core.jar:/Applications/NetBeans/sges-v3/glassfish/modules/org.eclipse.persistence.jpa.jar:/Applications/NetBeans/sges-v3/glassfish/modules/org.eclipse.persistence.jpa.modelgen.jar:/Applications/NetBeans/sges-v3/glassfish/modules/org.eclipse.persistence.oracle.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.persistence.jar" />
+    <property name="libs.javaee-web-api-6.0.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/javaee-web-api-6.0.jar" />
+    <property name="libs.hibernate-support.maven-pom" value="" />
+    <property name="libs.hibernate-support.javadoc" value="" />
+    <property name="jdk.home" value="/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home" />
+    <property name="directory.deployment.supported" value="true" />
+    <property name="libs.javac-api.src" value="" />
+    <property name="javadoc.noindex" value="false" />
+    <property name="ant.file.WebServices" value="/Users/florian/Documents/Uni/Sommersemester 10/Enterprise Application Integration/eaitask3/build.xml" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="nb.show.statistics.ui" value="usageStatisticsEnabled" />
+    <property name="netbeans.autoupdate.variant" value="" />
+    <property name="have.tests" value="true" />
+    <property name="platforms.null.bootclasspath" value="/Users/florian/.netbeans/6.8/javafx-sdk/lib/shared/javafxc.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/shared/javafxrt.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/rt15.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-geom.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-ui-common.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-ui-desktop.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-ui-swing.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/fxdloader.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/websvc.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-ui-controls.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-ui-charts.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-common.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-io.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/eula.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-anim.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/decora-runtime.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/decora-sse.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/decora-d3d.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/decora-j2d-rsl.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/decora-ogl.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/decora-j2d-jogl.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-sg-common.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-sg-swing.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/jogl.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/gluegen-rt.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/jmc.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/script-api.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/javafxapi-cldc.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/cldc_1.1.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/midp_2.0.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr120_1.1.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr135_1.1.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr172_1.0.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr177_1.0.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr179_1.0.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr184_1.1.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr234_1.0.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr256_1.1.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr75_1.0.jar" />
+    <property name="org.xml.sax.driver" value="com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser" />
+    <property name="j2ee.server.instance" value="[/Applications/NetBeans/sges-v3/glassfish]deployer:gfv3ee6:localhost:40047" />
+    <property name="libs.javac-api.javadoc" value="" />
+    <property name="os.name" value="Mac OS X" />
+    <property name="libs.beans-binding.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/beansbinding-1.2.1.jar" />
+    <property name="org.glassfish.v3ee6.installRoot" value="/Applications/NetBeans/sges-v3" />
+    <property name="libs.restapi.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/jsr311-api-1.1.1-javadoc.zip" />
+    <property name="mrj.version" value="1060.1.6.0_20-279" />
+    <property name="libs.JWSAntTasks.maven-pom" value="" />
+    <property name="libs.restapi.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/rest/jsr311-api-1.1.1.jar" />
+    <property name="runmain.jvmargs" value="" />
+    <property name="java.vendor.url.bug" value="http://bugreport.apple.com/" />
+    <property name="libs.jaxb.maven-pom" value="" />
+    <property name="os.arch" value="x86_64" />
+    <property name="libs.eclipselink.src" value="" />
+    <property name="user.name" value="florian" />
+    <property name="libs.jsf12.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/javaee6-doc-api.zip" />
+    <property name="libs.Comet-GlassFish-v3.javadoc" value="" />
+    <property name="libs.swing-layout.maven-pom" value="" />
+    <property name="build.classes.dir" value="build/web/WEB-INF/classes" />
+    <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
+    <property name="libs.Java-EE-GlassFish-v3.wsjwsdp" value="" />
+    <property name="libs.jaxws21.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/docs/jaxws-api-doc.zip" />
+    <property name="build.web.excludes" value="**/*.java,**/*.form" />
+    <property name="includes" value="**" />
+    <property name="j2ee.platform.wsimport.classpath" value="/Applications/NetBeans/sges-v3/glassfish/modules/webservices-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/webservices-api-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jaxb-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/jaxb-api-osgi.jar" />
+    <property name="platforms.default_fx_platform.java" value="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home/bin/java" />
+    <property name="user.country" value="DE" />
+    <property name="libs.jstl11.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/javaee6-doc-api.zip" />
+    <property name="javadoc.encoding" value="UTF-8" />
+    <property name="javac.classpath" value="libs\sqlitejdbc-v056.jar:libs\flexjson.jar:libs\jettison-1.2.jar" />
+    <property name="libs.JAVADB_DRIVER_LABEL.src" value="" />
+    <property name="do.debug.server" value="true" />
+    <property name="debug-transport" value="dt_socket" />
+    <property name="netbeans.system_http_non_proxy_hosts" value="" />
+    <property name="com.sun.mysql.port" value="3306" />
+    <property name="netbeans.home" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11" />
+    <property name="build.compiler.emacs" value="true" />
+    <property name="libs.javaee-web-api-6.0.src" value="" />
+    <property name="libs.ejb3-persistence.src" value="" />
+    <property name="libs.Java-EE-GlassFish-v3.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/javaee6-doc-api.zip" />
+    <property name="java.endorsed.dirs" value="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home/lib/endorsed" />
+    <property name="libs.Comet-GlassFish-v3.maven-pom" value="" />
+    <property name="libs.groovy-all.src" value="" />
+    <property name="test.includes" value="de/tests/ws/TestWebService.java" />
+    <property name="netbeans.dynamic.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/core/core.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/core/org-openide-filesystems.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/core/locale/core_ja.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/core/locale/core_pt_BR.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/core/locale/core_zh_CN.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/core/locale/org-openide-filesystems_ja.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/core/locale/org-openide-filesystems_pt_BR.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/core/locale/org-openide-filesystems_zh_CN.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/nb6.8/core/org-netbeans-upgrader.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/nb6.8/core/locale/core_nb.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/nb6.8/core/locale/core_nb_ja.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/nb6.8/core/locale/core_nb_pt_BR.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/nb6.8/core/locale/core_nb_zh_CN.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/nb6.8/core/locale/org-netbeans-upgrader_ja.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/nb6.8/core/locale/org-netbeans-upgrader_pt_BR.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/nb6.8/core/locale/org-netbeans-upgrader_zh_CN.jar" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="jspcompilation.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/ant/lib/ant.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/servlet2.5-jsp2.1-api.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/javax.annotation.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.resource.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/jaxb-api-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.security.jacc.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsf-impl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsr311-api.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.persistence.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.management.j2ee.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/webservices-api-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.servlet.jar:/Applications/NetBeans/sges-v3/glassfish/modules/weld-osgi-bundle.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.transaction.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.jms.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.ejb.jar:/Applications/NetBeans/sges-v3/glassfish/modules/bean-validator.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.servlet.jsp.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jstl-impl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/mail.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.security.auth.message.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.enterprise.deploy.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.servlet.jsp.jstl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsf-api.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/glassfish-jspparser-2.0.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/glassfish-logging-2.0.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/commons-logging-1.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/ant/lib/ant-launcher.jar:libs\sqlitejdbc-v056.jar:libs\flexjson.jar:libs\jettison-1.2.jar" />
+    <property name="libs.javaee-api-6.0.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/javaee-api-6.0.jar" />
+    <property name="libs.groovy-all.maven-pom" value="" />
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="libs.hibernate-persistence.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/antlr-2.7.6.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/asm.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/asm-attrs.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/cglib-2.1.3.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/commons-collections-2.1.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/commons-logging-1.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/dom4j-1.6.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/ehcache-1.2.3.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/jdbc2_0-stdext.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/jta.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/hibernate3.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/hibernate-tools.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/hibernate-annotations.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/hibernate-commons-annotations.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/hibernate-entitymanager.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/javassist.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/ejb3-persistence.jar" />
+    <property name="libs.jaxws21.src" value="" />
+    <property name="do.war.package.with.custom.manifest" value="true" />
+    <property name="libs.swing-app-framework.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/appframework-1.0.3.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/swing-worker-1.1.jar" />
+    <property name="netbeans.autoupdate.language" value="de" />
+    <property name="java.vendor" value="Apple Inc." />
+    <property name="libs.javaee-api-6.0.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/javaee6-doc-api.zip" />
+    <property name="javac.debug" value="true" />
+    <property name="javadoc.splitindex" value="true" />
+    <property name="file.separator" value="/" />
+    <property name="libs.IdentityAntTasks.src" value="" />
+    <property name="libs.restlib_gfv3ee6.classpath" value="/Applications/NetBeans/sges-v3/glassfish/modules/asm-all-repackaged.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jackson-core-asl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jersey-gf-bundle.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jersey-multipart.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jettison.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsr311-api.jar" />
+    <property name="libs.junit_4.maven-pom" value="" />
+    <property name="resource.dir" value="setup" />
+    <property name="netbeans.buildnumber" value="200912041610" />
+    <property name="libs.JWSAntTasks.javadoc" value="" />
+    <property name="build.generated.sources.dir" value="build/generated-sources" />
+    <property name="libs.Java-EE-GlassFish-v3.wscompile" value="" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="libs.junit.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/junit-3.8.2.jar" />
+    <property name="libs.jaxb.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/docs/jaxb-api-doc.zip" />
+    <property name="libs.struts.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/antlr-2.7.2.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/bsf-2.3.0.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/commons-beanutils-1.7.0.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/commons-chain-1.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/commons-digester-1.8.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/commons-fileupload-1.1.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/commons-io-1.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/commons-logging-1.0.4.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/commons-validator-1.3.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/jstl-1.0.2.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/oro-2.0.8.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/standard-1.0.2.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/struts-core-1.3.8.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/struts-el-1.3.8.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/struts-extras-1.3.8.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/struts-faces-1.3.8.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/struts-mailreader-dao-1.3.8.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/struts-scripting-1.3.8.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/struts-taglib-1.3.8.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/struts/struts-tiles-1.3.8.jar" />
+    <property name="application.args.param" value="" />
+    <property name="ant.home" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/ant" />
+    <property name="libs.junit_4.src" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/docs/junit-4.5-src.jar" />
+    <property name="conf.dir" value="src/conf" />
+    <property name="webinf.dir" value="web/WEB-INF" />
+    <property name="libs.absolutelayout.maven-pom" value="" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="java.library.path" value=".:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+    <property name="javadoc.author" value="false" />
+    <property name="libs.metro.maven-pom" value="" />
+    <property name="libs.IdentityAntTasks.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/identity2/ant/nblib/org-netbeans-modules-identity-ant.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/identity2/modules/org-netbeans-modules-identity-profile-api.jar" />
+    <property name="libs.EclipseLink-GlassFish-v3.src" value="" />
+    <property name="java.util.logging.config.class" value="org.netbeans.core.startup.TopLogging" />
+    <property name="libs.PostgreSQLDriver.src" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="basedir" value="/Users/florian/Documents/Uni/Sommersemester 10/Enterprise Application Integration/eaitask3" />
+    <property name="jar.compress" value="false" />
+    <property name="libs.jstl11.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/standard.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/jstl.jar" />
+    <property name="path.separator" value=":" />
+    <property name="dist.war" value="dist/WebServices.war" />
+    <property name="libs.javaee-web-api-6.0.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/javaee6-doc-api.zip" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="libs.jaxws21.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/activation.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/api/jaxb-api.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/jaxb-impl.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/jaxb-xjc.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/api/jsr173_api.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/FastInfoset.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/gmbal-api-only.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/http.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/api/jaxws-api.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/jaxws-rt.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/jaxws-tools.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/api/jsr181-api.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/api/jsr250-api.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/management-api.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/mimepull.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/policy.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/api/saaj-api.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/saaj-impl.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/stax-ex.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/streambuffer.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/jaxws22/woodstox.jar" />
+    <property name="libs.struts.src" value="" />
+    <property name="apple.awt.graphics.UseQuartz" value="false" />
+    <property name="user.language" value="de" />
+    <property name="j2ee.platform.classpath" value="/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/javax.annotation.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.resource.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/jaxb-api-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.security.jacc.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsf-impl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsr311-api.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.persistence.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.management.j2ee.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/webservices-api-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.servlet.jar:/Applications/NetBeans/sges-v3/glassfish/modules/weld-osgi-bundle.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.transaction.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.jms.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.ejb.jar:/Applications/NetBeans/sges-v3/glassfish/modules/bean-validator.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.servlet.jsp.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jstl-impl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/mail.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.security.auth.message.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.enterprise.deploy.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.servlet.jsp.jstl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsf-api.jar" />
+    <property name="libs.spring-framework.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/commons-logging-1.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/cglib-2.2.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/spring/spring-2.5.jar" />
+    <property name="libs.eclipselink.maven-pom" value="" />
+    <property name="build.meta.inf.dir" value="build/web/META-INF" />
+    <property name="persistence.xml.dir" value="src/conf" />
+    <property name="run.test.classpath" value="libs\sqlitejdbc-v056.jar:libs\flexjson.jar:libs\jettison-1.2.jar:build/web/WEB-INF/classes:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/modules/ext/junit-4.5.jar:build/test/classes" />
+    <property name="useJavaUtilZip" value="true" />
+    <property name="libs.swing-layout.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/docs/swing-layout-1.0.4-doc.zip" />
+    <property name="libs.swing-app-framework.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/docs/appframework-1.0.3-doc.zip" />
+    <property name="libs.ejb3-persistence.maven-pom" value="" />
+    <property name="gopherProxySet" value="false" />
+    <property name="https.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|localhost|127.0.0.1|florian-mullers-macbook.local" />
+    <property name="libs.PostgreSQLDriver.maven-pom" value="" />
+    <property name="java.class.version" value="50.0" />
+    <property name="libs.JAVADB_DRIVER_LABEL.classpath" value="/Applications/NetBeans/sges-v3/javadb/lib/derby.jar:/Applications/NetBeans/sges-v3/javadb/lib/derbyclient.jar:/Applications/NetBeans/sges-v3/javadb/lib/derbynet.jar" />
+    <property name="libs.javaee-endorsed-api-6.0.src" value="" />
+    <property name="netbeans.system_http_proxy" value="DIRECT" />
+    <property name="libs.eclipselink.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/javaee6-doc-api.zip" />
+    <property name="user.properties.file" value="/Users/florian/.netbeans/6.8/build.properties" />
+    <property name="platforms.default_fx_platform.bootclasspath" value="/Users/florian/.netbeans/6.8/javafx-sdk/lib/shared/javafxc.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/shared/javafxrt.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/rt15.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-geom.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-ui-common.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-ui-desktop.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-ui-swing.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/fxdloader.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/websvc.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-ui-controls.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-ui-charts.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-common.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-io.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/eula.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-anim.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/decora-runtime.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/decora-sse.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/decora-d3d.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/decora-j2d-rsl.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/decora-ogl.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/decora-j2d-jogl.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-sg-common.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/javafx-sg-swing.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/jogl.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/gluegen-rt.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/jmc.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/desktop/script-api.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/javafxapi-cldc.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/cldc_1.1.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/midp_2.0.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr120_1.1.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr135_1.1.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr172_1.0.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr177_1.0.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr179_1.0.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr184_1.1.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr234_1.0.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr256_1.1.jar:/Users/florian/.netbeans/6.8/javafx-sdk/lib/mobile/jsr75_1.0.jar" />
+    <property name="build.web.dir" value="build/web" />
+    <property name="libs.spring-framework.src" value="" />
+    <property name="libs.javac-api.maven-pom" value="" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="libs.JWSAntTasks.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/ant/extra/org-netbeans-modules-javawebstart-anttasks.jar" />
+    <property name="ant.file.WebServices-impl" value="/Users/florian/Documents/Uni/Sommersemester 10/Enterprise Application Integration/eaitask3/nbproject/build-impl.xml" />
+    <property name="empty.dir" value="/Users/florian/Documents/Uni/Sommersemester 10/Enterprise Application Integration/eaitask3/build/empty" />
+    <property name="display.browser" value="true" />
+    <property name="platforms.default_fx_platform.compiler" value="modern" />
+    <property name="version-output" value="java version &quot;1.6" />
+    <property name="javadoc.preview" value="true" />
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="nbplatform.default.harness.dir" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/harness" />
+    <property name="java.home" value="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home" />
+    <property name="libs.spring-webmvc.src" value="" />
+    <property name="debug.test.classpath" value="libs\sqlitejdbc-v056.jar:libs\flexjson.jar:libs\jettison-1.2.jar:build/web/WEB-INF/classes:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/modules/ext/junit-4.5.jar:build/test/classes" />
+    <property name="libs.javaee-endorsed-api-6.0.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/javaee6-endorsed/javax.annotation.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/javaee6-endorsed/webservices-api-osgi.jar" />
+    <property name="libs.javaee-api-6.0.src" value="" />
+    <property name="netbeans.importclass" value="org.netbeans.upgrade.AutoUpgrade" />
+    <property name="file.reference.sqlitejdbc-v056.jar" value="libs\sqlitejdbc-v056.jar" />
+    <property name="org.openide.TopManager" value="org.netbeans.core.NonGui" />
+    <property name="libs.toplink.maven-pom" value="" />
+    <property name="libs.PostgreSQLDriver.javadoc" value="" />
+    <property name="libs.restlib.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/rest/asm-3.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/rest/jackson-core-asl-1.1.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/rest/jersey-client-1.1.4.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/rest/jersey-core-1.1.4.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/rest/jersey-json-1.1.4.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/rest/jersey-server-1.1.4.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/rest/jersey-spring-1.1.4.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/rest/jettison-1.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/activation.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/api/jaxb-api.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/jaxb-impl.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/jaxb-xjc.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/api/jsr173_api.jar" />
+    <property name="com.sun.mysql.stopcommand" value="/usr/local/mysql/support-files/mysql-admin.server" />
+    <property name="libs.MySQLDriver.maven-pom" value="" />
+    <property name="j2ee.platform.wsgen.classpath" value="/Applications/NetBeans/sges-v3/glassfish/modules/webservices-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/webservices-api-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jaxb-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/jaxb-api-osgi.jar" />
+    <property name="platforms.null.home" value="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="libs.junit_4.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/docs/junit-4.5-api.zip" />
+    <property name="libs.spring-webmvc.javadoc" value="" />
+    <property name="libs.toplink.src" value="" />
+    <property name="libs.EclipseLink-GlassFish-v3.maven-pom" value="" />
+    <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
+    <property name="j2ee.deploy.on.save" value="true" />
+    <property name="libs.hibernate-support.src" value="" />
+    <property name="libs.javaee-endorsed-api-6.0.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/javaee6-doc-api.zip" />
+    <property name="sun.awt.datatransfer.timeout" value="1000" />
+    <property name="apple.awt.graphics.UseOpenGL" value="false" />
+    <property name="libs.restapi.src" value="" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Server Compiler" />
+    <property name="javac.deprecation" value="false" />
+    <property name="javadoc.use" value="true" />
+    <property name="jna.boot.library.path" value="/Users/florian/.netbeans/6.8/var/cache/jna" />
+    <property name="client.urlPart" value="" />
+    <property name="sun.java2d.noddraw" value="true" />
+    <property name="dist.ear.war" value="dist/WebServices.war" />
+    <property name="libs.spring-webmvc.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/spring/spring-webmvc-2.5.jar" />
+    <property name="javac.compilerargs" value="" />
+    <property name="ant.file" value="/Users/florian/Documents/Uni/Sommersemester 10/Enterprise Application Integration/eaitask3/build.xml" />
+    <property name="libs.beans-binding.maven-pom" value="" />
+    <property name="libs.jsf12.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/jsf-1_2/commons-beanutils.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/jsf-1_2/commons-collections.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/jsf-1_2/commons-digester.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/jsf-1_2/commons-logging.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/jsf-1_2/jsf-api.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/jsf-1_2/jsf-impl.jar" />
+    <property name="sun.awt.exception.handler" value="org.netbeans.core.startup.TopLogging$AWTHandler" />
+    <property name="has.custom.manifest" value="true" />
+    <property name="libs.restapi.maven-pom" value="" />
+    <property name="libs.beans-binding.src" value="" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="libs.swing-layout.src" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/docs/swing-layout-1.0.4-src.zip" />
+    <property name="libs.Java-EE-GlassFish-v3.embedabbleejb" value="" />
+    <property name="org.openide.major.version" value="IDE/1" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="do.display.browser.debug" value="true" />
+    <property name="netbeans.user" value="/Users/florian/.netbeans/6.8" />
+    <property name="javadoc.additionalparam" value="" />
+    <property name="java.io.tmpdir" value="/var/folders/5E/5EwNstmxGNeq078l6lF82E+++TI/-Tmp-/" />
+    <property name="java.vendor.url" value="http://www.apple.com/" />
+    <property name="endorsed.classpath.cmd.line.arg" value="-Xbootclasspath/p:&apos;/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/javaee6-endorsed/javax.annotation.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/javaee6-endorsed/webservices-api-osgi.jar&apos;" />
+    <property name="j2ee.platform.wsit.classpath" value="" />
+    <property name="compile.jsps" value="false" />
+    <property name="jspc.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/ant/lib/ant.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/servlet2.5-jsp2.1-api.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/javax.annotation.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.resource.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/jaxb-api-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.security.jacc.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsf-impl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsr311-api.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.persistence.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.management.j2ee.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/webservices-api-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.servlet.jar:/Applications/NetBeans/sges-v3/glassfish/modules/weld-osgi-bundle.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.transaction.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.jms.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.ejb.jar:/Applications/NetBeans/sges-v3/glassfish/modules/bean-validator.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.servlet.jsp.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jstl-impl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/mail.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.security.auth.message.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.enterprise.deploy.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.servlet.jsp.jstl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsf-api.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/glassfish-jspparser-2.0.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/glassfish-logging-2.0.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/commons-logging-1.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/ant/lib/ant-launcher.jar" />
+    <property name="mrj.build" value="10M3065" />
+    <property name="deploy.ant.properties.file" value="/Users/florian/.netbeans/6.8/gfv3-2100864977.properties" />
+    <property name="sun.boot.library.path" value="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Libraries" />
+    <property name="have.sources" value="true" />
+    <property name="debug.classpath" value="build/web/WEB-INF/classes:libs\sqlitejdbc-v056.jar:libs\flexjson.jar:libs\jettison-1.2.jar" />
+    <property name="war.name" value="WebServices.war" />
+    <property name="javadoc.private" value="false" />
+    <property name="file.reference.jettison-1.2.jar" value="libs\jettison-1.2.jar" />
+    <property name="test.src.dir" value="test" />
+    <property name="libs.jsf20.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/jsf-2_0/jsf-api.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/jsf-2_0/jsf-impl.jar" />
+    <property name="javadoc.encoding.used" value="UTF-8" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="ant.project.name" value="WebServices" />
+    <property name="netbeans.hash.code" value="unique=-n NB0c6315f01-f5ff-412f-a1a7-0f996bc85a79_bdbbbed7-819d-4c07-a265-4a8d2481700a" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="libs.CopyLibs.javadoc" value="" />
+    <property name="org.openide.specification.version" value="6.2" />
+    <property name="libs.hibernate-support.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/antlr-2.7.6.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/asm.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/asm-attrs.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/cglib-2.1.3.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/commons-collections-2.1.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/commons-logging-1.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/dom4j-1.6.1.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/ehcache-1.2.3.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/jdbc2_0-stdext.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/jta.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/hibernate3.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/hibernate-tools.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/hibernate-annotations.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/hibernate-commons-annotations.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/hibernate-entitymanager.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/javassist.jar" />
+    <property name="user.home" value="/Users/florian" />
+    <property name="debug-args-line" value="-Xdebug" />
+    <property name="libs.javaee-api-6.0.maven-pom" value="" />
+    <property name="libs.JWSAntTasks.src" value="" />
+    <property name="libs.CopyLibs.maven-pom" value="" />
+    <property name="libs.hibernate-persistence.maven-pom" value="" />
+    <property name="libs.absolutelayout.javadoc" value="" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="libs.swing-app-framework.maven-pom" value="" />
+    <property name="no.dist.ear.dir" value="true" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="libs.javac-api.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/javac-api-nb-7.0-b07.jar" />
+    <property name="platforms.default_fx_platform.home" value="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home" />
+    <property name="java.version" value="1.6.0_20" />
+    <property name="javadoc.version" value="false" />
+    <property name="libs.MySQLDriver.javadoc" value="" />
+    <property name="org.openide.version" value="deprecated" />
+    <property name="libs.restlib_gfv3ee6.maven-pom" value="" />
+    <property name="source.encoding" value="UTF-8" />
+    <property name="awt.nativeDoubleBuffering" value="true" />
+    <property name="libs.junit.maven-pom" value="" />
+    <property name="libs.metro.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/metro-1.4-doc.zip" />
+    <property name="libs.struts.maven-pom" value="" />
+    <property name="netbeans.home+have.tests" value="true" />
+    <property name="libs.IdentityAntTasks.maven-pom" value="" />
+    <property name="libs.jaxb.src" value="" />
+    <property name="libs.Java-EE-GlassFish-v3.wsgenerate" value="" />
+    <property name="libs.jaxb.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/activation.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/api/jaxb-api.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/jaxb-impl.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/jaxb1-impl.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/jaxb-xjc.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/api/jsr173_api.jar" />
+    <property name="platforms.null.fxhome" value="/Users/florian/.netbeans/6.8/javafx-sdk" />
+    <property name="com.sun.mysql.startargs" value="start" />
+    <property name="dist.javadoc.dir" value="dist/javadoc" />
+    <property name="libs.swing-layout.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/modules/ext/swing-layout-1.0.4.jar" />
+    <property name="libs.restlib.src" value="" />
+    <property name="build.generated.dir" value="build/generated" />
+    <property name="javac.source" value="1.5" />
+    <property name="libs.hibernate-persistence.src" value="" />
+    <property name="line.separator" value="
+" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="libs.jaxws21.maven-pom" value="" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="libs.spring-framework.maven-pom" value="" />
+    <property name="sun.boot.class.path" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/javaee6-endorsed/javax.annotation.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/javaee6-endorsed/webservices-api-osgi.jar:/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Classes/jsfd.jar:/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Classes/ui.jar:/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Classes/laf.jar:/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Classes/sunrsasign.jar:/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Classes/jsse.jar:/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Classes/jce.jar:/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Classes/charsets.jar" />
+    <property name="javac.target" value="1.5" />
+    <property name="build.test.classes.dir" value="build/test/classes" />
+    <property name="platforms.null.compiler" value="modern" />
+    <property name="src.dir" value="src/java" />
+    <property name="libs.IdentityAntTasks.javadoc" value="" />
+    <property name="com.sun.mysql.startcommand" value="/usr/local/mysql/support-files/mysql-admin.server" />
+    <property name="libs.jsf20.src" value="" />
+    <property name="libs.jsf12.src" value="" />
+    <property name="j2ee.platform" value="1.6-web" />
+    <property name="libs.JAVADB_DRIVER_LABEL.maven-pom" value="" />
+    <property name="nbplatform.default.netbeans.dest.dir" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans" />
+    <property name="libs.struts.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/struts-1.3.8-javadoc.zip" />
+    <property name="jaxbwiz.endorsed.dirs" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/api" />
+    <property name="jspctask.classpath" value="/Users/florian/.netbeans/6.8/ant/extra/jspcompile.jar" />
+    <property name="libs.Comet-GlassFish-v3.classpath" value="/Applications/NetBeans/sges-v3/glassfish/modules/grizzly-comet.jar" />
+    <property name="web.docbase.dir" value="web" />
+    <property name="libs.restlib_gfv3ee6.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/jsr311-api-1.1.1-javadoc.zip:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/jersey-1.1.4-javadoc.zip" />
+    <property name="dist.dir" value="dist" />
+    <property name="libs.groovy-all.javadoc" value="" />
+    <property name="libs.groovy-all.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/groovy2/modules/ext/groovy-all.jar" />
+    <property name="java.awt.printerjob" value="apple.awt.CPrinterJob" />
+    <property name="default.javac.source" value="1.6" />
+    <property name="debug-transport-by-os" value="dt_socket" />
+    <property name="com.sun.mysql.stopargs" value="stop" />
+    <property name="sun.jnu.encoding" value="MacRoman" />
+    <property name="libs.MySQLDriver.src" value="" />
+    <property name="platforms.default_fx_platform.fxhome" value="/Users/florian/.netbeans/6.8/javafx-sdk" />
+    <property name="build.test.results.dir" value="build/test/results" />
+    <property name="java.runtime.version" value="1.6.0_20-b02-279-10M3065" />
+    <property name="libs.ejb3-persistence.javadoc" value="" />
+    <property name="default.javac.target" value="1.6" />
+    <property name="libs.Java-EE-GlassFish-v3.src" value="" />
+    <property name="libs.junit_4.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/modules/ext/junit-4.5.jar" />
+    <property name="user.timezone" value="" />
+    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
+    <property name="libs.JAVADB_DRIVER_LABEL.javadoc" value="" />
+    <property name="netbeans.dirs" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/nb6.8:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ergonomics2:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3:/Applications/NetBeans/NetBeans 6.8.app/Contents/MacOS/../Resources/NetBeans/bin/../xml2:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/apisupport1:/Applications/NetBeans/NetBeans 6.8.app/Contents/MacOS/../Resources/NetBeans/bin/../webcommon1:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/websvccommon1:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6:/Applications/NetBeans/NetBeans 6.8.app/Contents/MacOS/../Resources/NetBeans/bin/../mobility8:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/profiler3:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ruby2:/Applications/NetBeans/NetBeans 6.8.app/Contents/MacOS/../Resources/NetBeans/bin/../python1:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/php1:/Applications/NetBeans/NetBeans 6.8.app/Contents/MacOS/../Resources/NetBeans/bin/../visualweb2:/Applications/NetBeans/NetBeans 6.8.app/Contents/MacOS/../Resources/NetBeans/bin/../soa2:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/identity2:/Applications/NetBeans/NetBeans 6.8.app/Contents/MacOS/../Resources/NetBeans/bin/../uml6:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/harness:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/cnd3:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/dlight2:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/groovy2:/Applications/NetBeans/NetBeans 6.8.app/Contents/MacOS/../Resources/NetBeans/bin/../extra:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/javafx2:/Applications/NetBeans/NetBeans 6.8.app/Contents/MacOS/../Resources/NetBeans/bin/../javacard1:" />
+    <property name="libs.jsf20.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/javaee6-doc-api.zip" />
+    <property name="libs.restlib_gfv3ee6.src" value="" />
+    <property name="java.ext.dirs" value="/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home/lib/ext" />
+    <property name="libs.metro.src" value="" />
+    <property name="endorsed.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/javaee6-endorsed/javax.annotation.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/javaee6-endorsed/webservices-api-osgi.jar" />
+    <property name="libs.absolutelayout.classpath" value="/Users/florian/.netbeans/6.8/modules/ext/AbsoluteLayout.jar" />
+    <property name="excludes" value="" />
+    <property name="libs.metro.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/jaxb/activation.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/metro/webservices-api.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/metro/webservices-extra-api.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/metro/webservices-extra.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/metro/webservices-rt.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/modules/ext/metro/webservices-tools.jar" />
+    <property name="libs.restlib.maven-pom" value="" />
+    <property name="java.class.path" value="/Users/florian/Documents/Uni/Sommersemester 10/Enterprise Application Integration/eaitask3/libs/sqlitejdbc-v056.jar:/Users/florian/Documents/Uni/Sommersemester 10/Enterprise Application Integration/eaitask3/libs/flexjson.jar:/Users/florian/Documents/Uni/Sommersemester 10/Enterprise Application Integration/eaitask3/libs/jettison-1.2.jar:/Users/florian/Documents/Uni/Sommersemester 10/Enterprise Application Integration/eaitask3/build/web/WEB-INF/classes:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/platform11/modules/ext/junit-4.5.jar:/Users/florian/Documents/Uni/Sommersemester 10/Enterprise Application Integration/eaitask3/build/test/classes:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/javax.annotation.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.resource.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/jaxb-api-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.security.jacc.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsf-impl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsr311-api.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.persistence.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.management.j2ee.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/webservices-api-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.servlet.jar:/Applications/NetBeans/sges-v3/glassfish/modules/weld-osgi-bundle.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.transaction.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.jms.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.ejb.jar:/Applications/NetBeans/sges-v3/glassfish/modules/bean-validator.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.servlet.jsp.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jstl-impl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/mail.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.security.auth.message.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.enterprise.deploy.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.servlet.jsp.jstl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsf-api.jar:/Applications/NetBeans/sges-v3/glassfish/lib/embedded/glassfish-embedded-static-shell.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/ant/lib/ant-launcher.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/ant/lib/ant.jar:/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/ant/patches/72080.jar" />
+    <property name="apple.laf.useScreenMenuBar" value="true" />
+    <property name="libs.absolutelayout.src" value="" />
+    <property name="j2ee.server.type" value="gfv3ee6" />
+    <property name="os.version" value="10.6.3" />
+    <property name="libs.EclipseLink-GlassFish-v3.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/javaee6-doc-api.zip" />
+    <property name="libs.toplink.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/javaee6-doc-api.zip" />
+    <property name="libs.Comet-GlassFish-v3.src" value="" />
+    <property name="libs.restlib.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/enterprise6/docs/jersey-1.1.4-javadoc.zip" />
+    <property name="war.content.additional" value="" />
+    <property name="j2ee.platform.embeddableejb.classpath" value="/Applications/NetBeans/sges-v3/glassfish/lib/embedded/glassfish-embedded-static-shell.jar" />
+    <property name="libs.eclipselink.classpath" value="/Users/florian/.netbeans/6.8/modules/ext/eclipselink/eclipselink-2.0.0.jar:/Users/florian/.netbeans/6.8/modules/ext/eclipselink/eclipselink-javax.persistence-2.0.jar" />
+    <property name="libs.beans-binding.javadoc" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/docs/beansbinding-1.2.1-doc.zip" />
+    <property name="java.awt.graphicsenv" value="apple.awt.CGraphicsEnvironment" />
+    <property name="libs.Java-EE-GlassFish-v3.classpath" value="/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/javax.annotation.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.resource.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/jaxb-api-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.security.jacc.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsf-impl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsr311-api.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.persistence.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.management.j2ee.jar:/Applications/NetBeans/sges-v3/glassfish/modules/endorsed/webservices-api-osgi.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.servlet.jar:/Applications/NetBeans/sges-v3/glassfish/modules/weld-osgi-bundle.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.transaction.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.jms.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.ejb.jar:/Applications/NetBeans/sges-v3/glassfish/modules/bean-validator.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.servlet.jsp.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jstl-impl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/mail.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.security.auth.message.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.enterprise.deploy.jar:/Applications/NetBeans/sges-v3/glassfish/modules/javax.servlet.jsp.jstl.jar:/Applications/NetBeans/sges-v3/glassfish/modules/jsf-api.jar:/Applications/NetBeans/sges-v3/glassfish/modules/web-core.jar" />
+    <property name="java.vm.vendor" value="Apple Inc." />
+    <property name="libs.CopyLibs.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
+    <property name="libs.Java-EE-GlassFish-v3.wsinterop" value="" />
+    <property name="libs.spring-webmvc.maven-pom" value="" />
+    <property name="libs.ejb3-persistence.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/java3/modules/ext/hibernate/ejb3-persistence.jar" />
+    <property name="libs.spring-framework.javadoc" value="" />
+    <property name="libs.PostgreSQLDriver.classpath" value="/Applications/NetBeans/NetBeans 6.8.app/Contents/Resources/NetBeans/ide12/modules/ext/postgresql-8.3-603.jdbc3.jar" />
+    <property name="libs.jsf12.maven-pom" value="" />
+    <property name="libs.junit.src" value="" />
+    <property name="libs.CopyLibs.src" value="" />
+    <property name="build.dir" value="build" />
+    <property name="platforms.null.java" value="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home/bin/java" />
+    <property name="j2ee.platform.is.jsr109" value="true" />
+    <property name="ant.version" value="Apache Ant version 1.7.1 compiled on June 27 2008" />
+    <property name="file.encoding" value="MacRoman" />
+    <property name="file.reference.flexjson.jar" value="libs\flexjson.jar" />
+    <property name="build.classes.excludes" value="**/*.java,**/*.form" />
+    <property name="javadoc.nonavbar" value="false" />
+    <property name="platform.active" value="default_platform" />
+    <property name="awt.toolkit" value="apple.awt.CToolkit" />
+    <property name="war.ear.name" value="WebServices.war" />
+  </properties>
+  <testcase classname="de.tests.ws.TestWebService" name="maintenanceTest" time="0.455" />
+  <testcase classname="de.tests.ws.TestWebService" name="createDomainTest" time="0.028" />
+  <system-out><![CDATA[Hier wurde Item erstellt!!!!!!!!!!!!!!!
+This is bla: 1
+This is bla: 2
+This is bla: 3
+1     cars
+1 price cars 10 Euro
+1 brand cars VW
+2     bikes
+2 price bikes 5 Euro
+2 brand bikes Holland
+3     products
+3 price products 2 Euro
+3 brand products Becks
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
