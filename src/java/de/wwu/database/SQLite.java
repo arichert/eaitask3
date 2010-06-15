@@ -122,10 +122,9 @@ public class SQLite {
             //Create the table for "item"
             stat.executeUpdate(
                     "CREATE TABLE item (" +
-                    "item_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                    "item_id INTEGER PRIMARY KEY, " +
                     "domain_name VARCHAR(200)," +
                     "FOREIGN KEY (domain_name)   REFERENCES domain (name) );");
-            System.out.println("Hier wurde Item erstellt!!!!!!!!!!!!!!!");
 
             //Value
             stat = this.conn.createStatement();
@@ -134,8 +133,8 @@ public class SQLite {
             stat.executeUpdate(
                     "CREATE TABLE value (" +
                     "item_id INTEGER, " +
-                    "domain_name VARCHAR(200)," +
                     "attribute_name VARCHAR(200)," +
+                    "domain_name VARCHAR(200)," +
                     "value TEXT," +
                     "FOREIGN KEY (domain_name)   REFERENCES domain (name),"+
                     "FOREIGN KEY (attribute_name)   REFERENCES attribute(attribute_name)," +

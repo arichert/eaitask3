@@ -32,10 +32,10 @@ public class Item2Database
 
             //Create new attribute
             PreparedStatement prep = db.conn.prepareStatement(
-                    "INSERT INTO item (domain_name) VALUES (?);");
+                    "INSERT INTO item VALUES (NULL,?);");
 
             //Set the domainname
-            prep.setString(2, domain_name);
+            prep.setString(1, domain_name);
             //Execute the sql statement
             prep.execute();
             //Get the generated key
@@ -44,7 +44,7 @@ public class Item2Database
             if (autoKey.next())
             {
                 //return the value of the column item_id
-                newItemId = autoKey.getInt("item_id");
+                newItemId = autoKey.getInt(1);
             }
             autoKey.close();
             // TODO: Richtige Exceptions raussuchen
@@ -78,8 +78,7 @@ public class Item2Database
             {
                 rs.close();
                 prep = db.conn.prepareStatement(
-                        "REMOVE FROM value " +
-                        "WHERE item_id = ?;");
+                        "DELETE FROM value WHERE item_id = ?;");
                 prep.setInt(1, itemId);
                 prep.execute();
                 string = "Deleting values with item_id " + item_id +
@@ -102,7 +101,7 @@ public class Item2Database
             {
                 rs.close();
                 prep = db.conn.prepareStatement(
-                        "REMOVE FROM item " +
+                        "DELETE FROM item " +
                         "WHERE item_id = ?;");
                 prep.setInt(1, itemId);
                 prep.execute();
@@ -117,6 +116,7 @@ public class Item2Database
         {
             string = e.toString();
             type = "error";
+            e.printStackTrace();
         }
 //        catch (NumberFormatException e)
 //        {
@@ -135,10 +135,9 @@ public class Item2Database
             //Connect to SQLite database
             db = new SQLite().connect();
 
-            //Create prepared statement
             PreparedStatement prep = db.conn.prepareStatement(
                     "SELECT * " +
-                    "FROM value " +
+                    "FROM item " +
                     "WHERE item_id = ?;");
             prep.setInt(1, itemId);
             ResultSet rs = prep.executeQuery();
@@ -147,11 +146,18 @@ public class Item2Database
             {
                 requestedItem.item_id = rs.getInt("item_id");
                 requestedItem.domain_name = rs.getString("domain_name");
-                String attributeName = rs.getString("attribute_name");
-                String value = rs.getString("value");
-                requestedItem.addAttribute(attributeName, value);
             }
+            rs.close();
 
+            //Create prepared statement
+            prep = db.conn.prepareStatement(
+                    "SELECT * " +
+                    "FROM value " +
+                    "WHERE item_id = ?;");
+            prep.setInt(1, itemId);
+            rs = prep.executeQuery();
+
+            
             while (rs.next())
             {
                 String attributeName = rs.getString("attribute_name");
@@ -222,6 +228,7 @@ public class Item2Database
 
             if (rs.next())
             {
+                rs.close();
                 prep = db.conn.prepareStatement(
                         "UPDATE value " +
                         "SET value = ? " +
@@ -233,16 +240,62 @@ public class Item2Database
                 prep.executeUpdate();
 
                 type = "success";
-                string = "Item value was set!";
+                string = "Item value was changed!";
             } else
             {
-                type = "error";
-                string = "Item value could not be set, there is no value " +
-                        "with the item_id " + item_id + " and the " +
-                        "attribute_name " + attribute_name + "!";
-            }
+                rs.close();
 
-            rs.close();
+                prep = db.conn.prepareStatement(
+                    "SELECT * " +
+                    "FROM item " +
+                    "WHERE item_id = ?;");
+                prep.setInt(1, itemId);
+                rs = prep.executeQuery();
+
+                if (rs.next())
+                {
+                    String domainOfItem = rs.getString("domain_name");
+                    rs.close();
+
+                    prep = db.conn.prepareStatement(
+                    "SELECT * " +
+                    "FROM attribute " +
+                    "WHERE attribute_name = ?" +
+                    "AND domain_name = ?;");
+                    prep.setString(1, attribute_name);
+                    prep.setString(2, domainOfItem);
+                    rs = prep.executeQuery();
+
+                    if (rs.next())
+                    {
+                        
+                        prep = db.conn.prepareStatement(
+                                "INSERT INTO value VALUES (?,?,?,?);");
+                        prep.setInt(1, itemId);
+                        prep.setString(2, attribute_name);
+                        prep.setString(3, rs.getString("domain_name"));
+                        prep.setString(4, value);
+                        prep.execute();
+                        rs.close();
+                        type = "success";
+                        string = "A new item value was created.";
+                        
+                    } else
+                    {
+                        rs.close();
+                        type = "error";
+                        string = "There is no attribute with the name " +
+                                attribute_name + " that has the same domain " +
+                                "name as the given item with id " + item_id;
+                    }
+                } else
+                {
+                    rs.close();
+                    type = "error";
+                    string = "There is no item with the id "+ item_id + ".";
+                }
+
+            }
         } catch (Exception e)
         {
             System.out.println(e);

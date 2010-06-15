@@ -14,7 +14,7 @@ import java.util.HashMap;
  */
 public class ItemDAO implements Serializable
 {
-    public int item_id = 0;
+    public int item_id = -1;
     public String domain_name = "";
 
     public HashMap<String,String> attributes;
