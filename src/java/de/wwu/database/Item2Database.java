@@ -204,7 +204,36 @@ public class Item2Database
         }
         return domainItems;
     }
+public static List<ItemDAO> searchItems(
+            String search_string)
+    {
+        List<ItemDAO> domainItems =
+                new ArrayList<ItemDAO>();
+        try
+        {
+            //Connect to SQLite database
+            db = new SQLite().connect();
 
+            //Create prepared statement
+            PreparedStatement prep = db.conn.prepareStatement(
+                    "SELECT item_id " +
+                    "FROM value " +
+                    "WHERE value LIKE '%' || ? || '%';");
+            prep.setString(1, search_string);
+            ResultSet rs = prep.executeQuery();
+
+            while(rs.next())
+            {
+                domainItems.add(getItem(rs.getString("item_id")));
+            }
+
+            rs.close();
+        } catch (Exception e)
+        {
+            System.out.println(e);
+        }
+        return domainItems;
+    }
     public static MessageDAO setItemValue(String item_id, String attribute_name,
             String value)
     {

@@ -42,5 +42,9 @@
 
         <h2>Items</h2>
         ...
+        <h2>Search</h2>
+        <ul>
+           <li><a href="<%=apiBase%>listSearchItems&valueName=Becks">listSearchItems&valueName=Becks</a></li>
+        </ul>
     </body>
 </html>
