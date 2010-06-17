@@ -78,27 +78,27 @@ public class Dispatcher extends HttpServlet {
         /******HANDLING OF ITEMS********/
         /**TODO**/
         else if (action.equals("createItem")) {
-            AttributeAPI.listDomainAttributes(request, response, out);
+            ItemAPI.createItem(request, response, out);
         }
 
         else if (action.equals("deleteItem")) {
-            AttributeAPI.createAttribute(request, response, out);
+            ItemAPI.deleteItem(request, response, out);
         }
 
         else if (action.equals("getItem")) {
-            AttributeAPI.deleteAttribute(request, response, out);
+            ItemAPI.getItem(request, response, out);
         }
 
         else if (action.equals("listDomainItems")) {
-            AttributeAPI.listDomainAttributes(request, response, out);
+           ItemAPI.listDomainItems(request, response, out);
         }
 
         else if (action.equals("setItemValue")) {
-            AttributeAPI.createAttribute(request, response, out);
+            ItemAPI.setItemValue(request, response, out);
         }
 
         else if (action.equals("getItemValue")) {
-            AttributeAPI.deleteAttribute(request, response, out);
+            ItemAPI.getItemValue(request, response, out);
         }
 
         /******HANDLING OF SEARCH********/

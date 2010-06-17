@@ -94,7 +94,7 @@ public class Domain2Database {
 
                 //Create a new domain:
                 //Create prepared statement
-                prep = db.conn.prepareStatement("remove from domain where name = ?;");
+                prep = db.conn.prepareStatement("delete from domain where name = ?;");
                 //Set the domain name
                 prep.setString(1, domainname);
                 //Execute the sql statement
