@@ -115,7 +115,7 @@ public class Item2Database {
     }
 
     public static ItemDAO getItem(String item_id) {
-        ItemDAO requestedItem = new ItemDAO();
+        ItemDAO requestedItem = null;
         try {
             int itemId = Integer.parseInt(item_id);
             //Connect to SQLite database
@@ -129,27 +129,29 @@ public class Item2Database {
             ResultSet rs = prep.executeQuery();
 
             if (rs.next()) {
+                requestedItem = new ItemDAO();
                 requestedItem.item_id = rs.getInt("item_id");
                 requestedItem.domain_name = rs.getString("domain_name");
+            
+                rs.close();
+
+                //Create prepared statement
+                prep = db.conn.prepareStatement(
+                        "SELECT * "
+                        + "FROM value "
+                        + "WHERE item_id = ?;");
+                prep.setInt(1, itemId);
+                rs = prep.executeQuery();
+
+
+                while (rs.next()) {
+                    String attributeName = rs.getString("attribute_name");
+                    String value = rs.getString("value");
+                    requestedItem.addAttribute(attributeName, value);
+                }
+
+                rs.close();
             }
-            rs.close();
-
-            //Create prepared statement
-            prep = db.conn.prepareStatement(
-                    "SELECT * "
-                    + "FROM value "
-                    + "WHERE item_id = ?;");
-            prep.setInt(1, itemId);
-            rs = prep.executeQuery();
-
-
-            while (rs.next()) {
-                String attributeName = rs.getString("attribute_name");
-                String value = rs.getString("value");
-                requestedItem.addAttribute(attributeName, value);
-            }
-
-            rs.close();
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -184,32 +186,7 @@ public class Item2Database {
         return domainItems;
     }
 
-    public static List<ItemDAO> searchItems(
-            String search_string) {
-        List<ItemDAO> domainItems =
-                new ArrayList<ItemDAO>();
-        try {
-            //Connect to SQLite database
-            db = new SQLite().connect();
-
-            //Create prepared statement
-            PreparedStatement prep = db.conn.prepareStatement(
-                    "SELECT item_id "
-                    + "FROM value "
-                    + "WHERE value LIKE '%' || ? || '%';");
-            prep.setString(1, search_string);
-            ResultSet rs = prep.executeQuery();
-
-            while (rs.next()) {
-                domainItems.add(getItem(rs.getString("item_id")));
-            }
-
-            rs.close();
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        return domainItems;
-    }
+    
 
     public static MessageDAO setItemValue(String item_id, String attribute_name,
             String value) {

@@ -6,8 +6,7 @@
 package de.wwu.ws;
 
 import de.wwu.DAO.ItemDAO;
-import de.wwu.DAO.MessageDAO;
-import de.wwu.database.Item2Database;
+import de.wwu.database.Search2Database;
 import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -23,10 +22,23 @@ import javax.jws.soap.SOAPBinding.Style;
 @WebService()
 @SOAPBinding(style = Style.DOCUMENT, use = SOAPBinding.Use.LITERAL)
 public class Search {
-    @WebMethod(operationName = "searchValue")
+    @WebMethod(operationName = "search")
     @WebResult(name = "item")
-    public List<ItemDAO> searchValue(@WebParam(name="valueName")String searchName) {
-        return Item2Database.searchItems(searchName);
+    public List<ItemDAO> search(@WebParam(name="value")String value) {
+        return Search2Database.search(value);
     }
-    
+
+    @WebMethod(operationName = "search2")
+    @WebResult(name = "item")
+    public List<ItemDAO> search2(@WebParam(name="value")String value,
+            @WebParam(name="domainName")String domainName) {
+        return Search2Database.search(value, domainName);
+    }
+    @WebMethod(operationName = "search3")
+    @WebResult(name = "item")
+    public List<ItemDAO> search3(@WebParam(name="value")String value,
+            @WebParam(name="domainName")String domainName,
+            @WebParam(name="attributeName")String attributeName) {
+        return Search2Database.search(value, domainName, attributeName);
+    }
 }

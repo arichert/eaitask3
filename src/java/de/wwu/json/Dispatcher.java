@@ -104,7 +104,7 @@ public class Dispatcher extends HttpServlet {
         /******HANDLING OF SEARCH********/
         /**TODO**/
         else if (action.equals("listSearchItems")) {
-            ItemAPI.listSearchItems(request, response, out);
+            SearchAPI.search(request, response, out);
         }
         
         //If nothing else fitted the parameters, print out the correct usage of the WebAPI

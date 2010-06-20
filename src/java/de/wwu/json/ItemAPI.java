@@ -123,31 +123,6 @@ public class ItemAPI
         //Serialize the Java objects and exclude the java class name
         out.print(serializer.exclude("class").serialize(items));
     }
-    public static void listSearchItems(HttpServletRequest request,
-            HttpServletResponse response, PrintWriter out)
-    {
-        //get the domain name parameter
-        String search_string = request.getParameter("valueName");
-
-        //Name not set
-        if (search_string == null) {
-            //Forward to the example and usage page of the Web api
-            RequestDispatcher dispatcher = request.getRequestDispatcher(
-                    "apiUsage.jsp");
-            try {
-                dispatcher.forward(request, response);
-            } catch (Exception e) {
-                System.out.println(e);
-            }
-        }
-
-        //Fetch data from database
-        List<ItemDAO> items = Item2Database.searchItems(search_string);
-        //Initialize a JSON serializer
-        JSONSerializer serializer = new JSONSerializer();
-        //Serialize the Java objects and exclude the java class name
-        out.print(serializer.exclude("class").serialize(items));
-    }
 
     public static void setItemValue(HttpServletRequest request,
             HttpServletResponse response, PrintWriter out)
