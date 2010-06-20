@@ -207,6 +207,42 @@
                 }
             }
 
+            function searchByValue(){
+                value=$("#searchValue1").val();
+                var soapEnv=xmlStart+'<ns2:search xmlns:ns2="http://ws.wwu.de/"><value>'+value+'</value></ns2:search>'+xmlEnd;
+                if($("#callChooser").val()=="1"){
+                    sendParameters="value="+value;
+                    makeWebAPICall(sendParameters, "listSearchItems");
+                }else{
+                    makeSOAPCall(soapEnv, "SearchService");
+                }
+            }
+
+            function searchByValueAndDomainName(){
+                value=$("#searchValue2").val();
+                domain_name=$("#searchDomainName2").val();
+                var soapEnv=xmlStart+'<ns2:search2 xmlns:ns2="http://ws.wwu.de/"><value>'+value+'</value><domainName>'+domain_name+'</domainName></ns2:search2>'+xmlEnd;
+                if($("#callChooser").val()=="1"){
+                    sendParameters="value="+value+"&"+"domainName="+domain_name;
+                    makeWebAPICall(sendParameters, "listSearchItems");
+                }else{
+                    makeSOAPCall(soapEnv, "SearchService");
+                }
+            }
+            
+            function searchByValueAndDomainNameAndAttributeName(){
+                value=$("#searchValue3").val();
+                domain_name=$("#searchDomainName3").val();
+                attribute_name=$("#searchAttributeName3").val();
+                var soapEnv=xmlStart+'<ns2:search3 xmlns:ns2="http://ws.wwu.de/"><value>'+value+'</value><domainName>'+domain_name+'</domainName><attributeName>'+attribute_name+'</attributeName></ns2:search3>'+xmlEnd;
+                if($("#callChooser").val()=="1"){
+                    sendParameters="value="+value+"&"+"domainName="+domain_name+"&"+"attributeName="+attribute_name;
+                    makeWebAPICall(sendParameters, "listSearchItems");
+                }else{
+                    makeSOAPCall(soapEnv, "SearchService");
+                }
+            }
+
 
 
 
@@ -311,15 +347,15 @@
                     <div id="accordion4">
                         <div>
                             <h3><a href="#">…value</a></h3>
-                            <div>value: <input type="text" name="searchValue1" value="" /><input type="submit" value="search()" /></div>
+                            <div>value: <input type="text" name="searchValue1" id="searchValue1" value="" /><input type="submit" value="search()" onclick="searchByValue();" /></div>
                         </div>
                         <div>
                             <h3><a href="#">…value AND domain_name</a></h3>
-                            <div>value: <input type="text" name="searchValue2" value="" />, domain_name: <input type="text" name="searchDomainName2" value="" /><input type="submit" value="search()" /></div>
+                            <div>value: <input type="text" name="searchValue2" id="searchValue2" value="" />, domain_name: <input type="text" name="searchDomainName2" id="searchDomainName2" value="" /><input type="submit" value="search()" onclick="searchByValueAndDomainName();" /></div>
                         </div>
                         <div>
                             <h3><a href="#">…value AND domain_name AND attribute_name</a></h3>
-                            <div>value: <input type="text" name="searchValue3" value="" />, domain_name: <input type="text" name="searchDomainName3" value="" />, attribute_name: <input type="text" name="searchAttributeName3" value="" /><input type="submit" value="search()" /></div>
+                            <div>value: <input type="text" name="searchValue3" id="searchValue3" value="" />, domain_name: <input type="text" name="searchDomainName3" id="searchDomainName3" value="" />, attribute_name: <input type="text" name="searchAttributeName3" id="searchAttributeName3" value="" /><input type="submit" value="search()" onclick="searchByValueAndDomainNameAndAttributeName();" /></div>
                         </div>
                     </div>
                 </div>
