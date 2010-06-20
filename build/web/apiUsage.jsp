@@ -19,20 +19,26 @@
 
 
         <script>
+            //Basic variable instantiation
             var host="localhost";
             var port= <%= request.getLocalPort()%>;
             var contextPath= "<%= request.getContextPath()%>" ;
             var basicURL = "http://"+host+":"+port+contextPath+"/";
             var xmlStart='<?xml version="1.0" encoding="UTF-8"?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Header/><S:Body>';
             var xmlEnd='</S:Body></S:Envelope>';
+            // The following JavaScript functions are used to gather the requiered data from the page, make requests for each service and to display the result.
+           // The first six functions are commented, the following are build up similiar to the last ones
 
-
-            <!--The SOAP and WebApi Calls-->
+            //The SOAP and WebApi Calls
             function makeSOAPCall(soapEnv, URLextension){
+                //get basic URL and add extension (special WebService)
                 $("#URL").html(basicURL+URLextension);
+                //Create code Field:
                 start='<pre name="code" id="xmlcode"class="xml">';
                 end='</pre>'
+                //write request data in DataField
                 $("#DataField").html(start+soapEnv+end);
+                //make Ajax Call
                 $.ajax({
                     url: basicURL+URLextension,
                     type: "POST",
@@ -43,10 +49,14 @@
                 });
             }
             function makeWebAPICall(parameter, action){
+                //get basic URL and add extension (special WebService)
                 $("#URL").html(basicURL+"WebAPI?action="+action);
+                //Create code field:
                 start='<pre name="code" id="xmlcode"class="xml">';
-                end='</pre>'
+                end='</pre>';
+                //write request data in DataField
                 $("#DataField").html(start+parameter+end);
+                //make Ajax Call
                 $.ajax({
                     url: basicURL+"WebAPI?action="+action+"&"+parameter,
                     type: "GET",
@@ -57,31 +67,43 @@
             }
             <!--The Callbackfunctions for the SOAP and WebApi Calls-->
             function showXmlResult(result,status){
+                //Create code field
                 start='<pre name="code" id="xmlcode"class="xml">';
-                end='</pre>'
+                end='</pre>';
+                // Write Result in code field
                 $("#Code").html(start+result.responseText+end);
+                // Highlight all code fields
                 dp.SyntaxHighlighter.HighlightAll('code');
             }
             
             function showJsonResult(result,status){
+                //Create code field
                 start='<pre name="code" id="javascriptcode"class="jscript">';
-                end='</pre>'
+                end='</pre>';
+                // Write Result in code field
                 $("#Code").html(start+result.responseText+end);
+                // Highlight all code fields
                 dp.SyntaxHighlighter.HighlightAll('code');
             }
 
 
             <!--Maintenance services-->
             function setUpDB(){
+                //create SOAP message:
                 var soapEnv =xmlStart+'<ns2:setUpDB xmlns:ns2="http://ws.wwu.de/"/>'+xmlEnd;
+                //select Service type (WebAPI or WebService
                 if($("#callChooser").val()=="1"){
+                    //make WebAPI Call
                     makeWebAPICall("", "setUpDB");
                 }else{
+                    //Make WebService Call
                     makeSOAPCall(soapEnv, "MaintenanceService");
                 }
             }
+
             <!--Domain services-->
             function createDomain(){
+                //get sending parameters
                 domain_name=$("#createDomainName").val();
                 var soapEnv=xmlStart+'<ns2:createDomain xmlns:ns2="http://ws.wwu.de/"><domainname>'+domain_name+'</domainname></ns2:createDomain>'+xmlEnd;
                 if($("#callChooser").val()=="1"){
@@ -207,6 +229,7 @@
                 }
             }
 
+            <!--Search services-->
             function searchByValue(){
                 value=$("#searchValue1").val();
                 var soapEnv=xmlStart+'<ns2:search xmlns:ns2="http://ws.wwu.de/"><value>'+value+'</value></ns2:search>'+xmlEnd;
@@ -249,6 +272,7 @@
 
         </script>
         <script type="text/javascript">
+            // Initialize the Accordions and Tabs
             $(function() {
                 $("#accordion0").accordion({ header: "h3" });
                 $("#accordion1").accordion({ header: "h3" });

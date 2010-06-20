@@ -15,5 +15,6 @@
     </head>
     <body>
         <h1>Users, Domains etc.</h1>
+        Please proceed to <a href="apiUsage.jsp">apiUsage.jsp</a>
     </body>
 </html>

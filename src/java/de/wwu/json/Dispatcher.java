@@ -62,7 +62,7 @@ public class Dispatcher extends HttpServlet {
         }
 
         /******HANDLING OF ATTRIBUTES********/
-        /**TODO**/
+       
         else if (action.equals("listDomainAttributes")) {
             AttributeAPI.listDomainAttributes(request, response, out);
         }
@@ -76,7 +76,7 @@ public class Dispatcher extends HttpServlet {
         }
 
         /******HANDLING OF ITEMS********/
-        /**TODO**/
+        
         else if (action.equals("createItem")) {
             ItemAPI.createItem(request, response, out);
         }
@@ -102,7 +102,7 @@ public class Dispatcher extends HttpServlet {
         }
 
         /******HANDLING OF SEARCH********/
-        /**TODO**/
+        
         else if (action.equals("listSearchItems")) {
             SearchAPI.search(request, response, out);
         }

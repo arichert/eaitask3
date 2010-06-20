@@ -43,7 +43,7 @@ public class Item2Database {
                 newItemId = autoKey.getInt(1);
             }
             autoKey.close();
-            // TODO: Richtige Exceptions raussuchen
+            
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -155,7 +155,7 @@ public class Item2Database {
         } catch (Exception e) {
             System.out.println(e);
         }
-        // TODO: Soll eine leere HashMap oder null zurückgegeben werden??
+        
         return requestedItem;
     }
 
@@ -280,7 +280,7 @@ public class Item2Database {
     }
 
     public static String getItemValue(String item_id, String attribute_name) {
-        // TODO: return null wenn kein item value gefunden wird??
+        
         String value = null;
         try {
             int itemId = Integer.parseInt(item_id);

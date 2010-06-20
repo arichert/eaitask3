@@ -183,7 +183,7 @@ public class SQLite {
                 ResultSet lastId = stat.executeQuery("SELECT last_insert_rowid();");
                 lastId.next();
 
-                //TODO : Remove
+                
                 String bla = lastId.getString(1);
                 System.out.println("This is bla: " + bla);
                 item.put("id", lastId.getString(1));

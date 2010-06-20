@@ -64,7 +64,7 @@ public class ItemAPI
                 System.out.println(e);
             }
         }
-        // TODO: Parsen hier oder in Item2DB?
+
         MessageDAO msg = Item2Database.deleteItem(item_id);
             
         //Initialize a JSON serializer
