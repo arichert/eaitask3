@@ -91,8 +91,29 @@ public class Domain2Database {
                 //Close the ResultSet!!!!
                 //very important --> ...
                 rs.close();
+                
+                //Delete associated values
+                prep = db.conn.prepareStatement("delete from value where domain_name = ?;");
+                //Set the domain name
+                prep.setString(1, domainname);
+                //Execute the sql statement
+                prep.execute();
 
-                //Create a new domain:
+                //Delete associated attributes
+                prep = db.conn.prepareStatement("delete from attribute where domain_name = ?;");
+                //Set the domain name
+                prep.setString(1, domainname);
+                //Execute the sql statement
+                prep.execute();
+
+                //Delete associated items
+                prep = db.conn.prepareStatement("delete from item where domain_name = ?;");
+                //Set the domain name
+                prep.setString(1, domainname);
+                //Execute the sql statement
+                prep.execute();
+
+                //Delete domain:
                 //Create prepared statement
                 prep = db.conn.prepareStatement("delete from domain where name = ?;");
                 //Set the domain name
